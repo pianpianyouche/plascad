@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 from setuptools import setup
-setup(name='plascad',
+setup(name='Plascad',
       version='1.2',
       packages=['plas_cad'],
       description="Plasmid classfication, ARGs annotation, Visualization",
@@ -13,7 +13,7 @@ setup(name='plascad',
       include_package_data=True,
       package_dir={'plascad': 'plas_cad'},
       package_data={'plas_cad': ['scripts/*','scripts/*/*','database/*/*','database/*/*/*','example/*']},
-      entry_points={'console_scripts': ['plascad = plas_cad.__main__:main']},
+      entry_points={'console_scripts': ['Plascad = plas_cad.__main__:main']},
       classifiers=['Programming Language :: Python :: 3']
       )
 
