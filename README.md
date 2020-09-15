@@ -17,7 +17,7 @@ Plascad is a computationally efficient tool designed for automated plasmids clas
 
 <h2 id="1">Plascad workflow</h2>
 Plascad first predicts ORFs in the query plasmid sequences and then detects the homologs of genes associated with plasmid transfer by hmmsearch with the built HMM protein profiles. Then, it identifies ARGs by searching against the structed ARGs database (SARGs), at last, a plasmid visualization component using AngularJS is integrated into this pipeline for the visualization of the classified conjugative plasmids.
-
+#
 
 ![](https://github.com/pianpianyouche/plascad/blob/master/Plascad.jpg) 
 
