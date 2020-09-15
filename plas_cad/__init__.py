@@ -1,5 +1,5 @@
 import sys
-import plas_cad
 sys.path.append("..")
+import plas_cad
 
-__version__ = "1.1"
+__version__ = "1.2"
