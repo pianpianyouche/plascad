@@ -2,7 +2,7 @@
 from setuptools import setup
 setup(name='plascad',
       version='1.2',
-      packages=['plas_cad']
+      packages=['plas_cad'],
       description="Plasmid classfication, ARGs annotation, Visualization",
       author="You CHE",
       author_email="cheyou@hku.hk",
