@@ -4,7 +4,7 @@ Plascad is a computationally efficient tool designed for automated plasmids clas
 
 # Contents
 
-* [Introduction](#1)
+* [Plascad workflow](#1)
 * [Requirements](#2)
 * [Installation](#3)
 * [Quick usage](#4)
@@ -15,18 +15,18 @@ Plascad is a computationally efficient tool designed for automated plasmids clas
 * [Citation](#9)
 * [Contact](#10)
 
-<h2 id="1">Introduction</h2>
-    Plascad first predicts ORFs in the query plasmid sequences and then detects the homologs of genes associated with plasmid transfer by hmmsearch with all the built HMM protein profiles. Then, it identifies ARGs by searching against the structed ARGs database, in addition, a plasmid visualization component using AngularJS is integrated into this pipeline for the visualization of the classified conjugative plasmids.
+<h2 id="1">Plascad workflow</h2>
+    Plascad first predicts ORFs in the query plasmid sequences and then detects the homologs of genes associated with plasmid transfer by hmmsearch with the built HMM protein profiles. Then, it identifies ARGs by searching against the structed ARGs database (SARGs), at last, a plasmid visualization component using AngularJS is integrated into this pipeline for the visualization of the classified conjugative plasmids.
 
 ![](https://github.com/pianpianyouche/plascad/blob/master/Plascad.jpg) 
 
 <h2 id="2">Requirements</h2>
 
 Linux  
-
-[Python2.7](https://www.python.org/download/releases/2.7/)  
-
+[Python >=3.6](https://www.python.org/downloads/)  
 [Biopython](https://biopython.org/)  
+[Blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+
 
 
 <h2 id="3">Run without installation</h2>
