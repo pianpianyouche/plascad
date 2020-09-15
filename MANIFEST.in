@@ -1,0 +1,6 @@
+include plas_cad/scripts/*
+include plas_cad/scripts/*/*
+include plas_cad/database/*/*
+include plas_cad/database/*/*/*
+include plas_cad/example/*
+include README.md
