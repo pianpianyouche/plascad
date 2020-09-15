@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python3.6
 from xml.etree import ElementTree
 from xml.dom import minidom
 def prettify(elem):

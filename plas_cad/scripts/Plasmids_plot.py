@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python3.6
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 from ElementTree_pretty import prettify
 from Bio import SeqIO

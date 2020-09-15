@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python3.6
 from collections import OrderedDict
 import re
 from Bio import SeqIO

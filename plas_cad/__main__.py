@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python3.6
 from collections import OrderedDict
 import shutil
 import os
@@ -11,7 +11,7 @@ import plas_cad
 
 def main():
     usage = ("usage: plas_cad -i your.plasmid.seqs.fasta")
-    version = 'plas-cad {v}'.format(v=plas_cad.__version__)
+    version = 'plas_cad {v}'.format(v=plas_cad.__version__)
 ###################################### checking dependencies ########################################
     list_cmd = ['prodigal', 'blastp', 'hmmsearch']
     for cmd in list_cmd:
@@ -26,9 +26,6 @@ def main():
     parser.add_argument("-i",
                         help="input plasmids file for classification", type=str,
                         default='example/example.fasta')
-    parser.add_argument("--test",
-                        help="test plas-cad",
-                        default='FALSE')
     parser.add_argument("-cMOBB",
                         help="alignment coverage for MOBB HMM profile",
                         default=75)
@@ -59,11 +56,6 @@ def main():
     args = parser.parse_args()
     directory =  os.path.abspath(os.path.dirname(__file__))
     file_name, file_ext = os.path.splitext(args.i)
-    if args.test:
-        print('testing plas-cad')
-        input_seq = os.path.join(directory, 'example/example.fasta')
-        cmd = 'python __main__.py ' + ' -i ' + str(input_seq)
-        os.system(cmd)
 ###################################### Prodigal ###########################################################
     cmdprodigal = "prodigal"  + " -i "  + str(args.i) + \
                 " -a " + str(file_name) + ".faa " + " -q -o temp.txt"
