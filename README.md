@@ -1,8 +1,8 @@
-# plas-cad-v1.0
-plas-cad is a computationally efficient tool designed for automated plasmids classification, ARGs detection and plasmid visualization.
+# Plascad v1.2
+Plascad is a computationally efficient tool designed for automated plasmids classification, ARGs annotation and plasmid visualization.
 
 
-# Table of contents
+# Contents
 
 * [Introduction](#1)
 * [Requirements](#2)
@@ -11,11 +11,14 @@ plas-cad is a computationally efficient tool designed for automated plasmids cla
 * [Example](#5)
 * [Output files](#6)
 * [Tips for visualization](#7)
-* [Citation](#8)
-* [Contact](#9)
+* [Acknowledgement](#8)
+* [Citation](#9)
+* [Contact](#10)
 
 <h2 id="1">Introduction</h2>
-    Plas-CAD first predicts ORFs in the query plasmid sequences and then detects the homologs of genes associated with plasmid transfer by hmmsearch with all the built HMM protein profiles. Then, it identifies ARGs by searching against the structed ARGs database, in addition, a plasmid visualization component using AngularJS is integrated into this pipeline for the visualization of the classified conjugative plasmids.
+    Plascad first predicts ORFs in the query plasmid sequences and then detects the homologs of genes associated with plasmid transfer by hmmsearch with all the built HMM protein profiles. Then, it identifies ARGs by searching against the structed ARGs database, in addition, a plasmid visualization component using AngularJS is integrated into this pipeline for the visualization of the classified conjugative plasmids.
+
+![](https://github.com/pianpianyouche/plascad/blob/master/Plascad.jpg) 
 
 <h2 id="2">Requirements</h2>
 
