@@ -10,8 +10,8 @@ sys.path.append("..")
 import plas_cad
 
 def main():
-    usage = ("usage: plas_cad -i your.plasmid.seqs.fasta")
-    version = 'plas_cad {v}'.format(v=plas_cad.__version__)
+    usage = ("usage: plascad -i your.plasmid.seqs.fasta")
+    version = 'plascad {v}'.format(v=plas_cad.__version__)
 ###################################### checking dependencies ########################################
     list_cmd = ['prodigal', 'blastp', 'hmmsearch']
     for cmd in list_cmd:
