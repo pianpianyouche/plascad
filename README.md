@@ -52,7 +52,7 @@ If you have the dependencies (Python >=3.6, blast >=2.7.1, prodigal >=2.6.3, hmm
 
 <h2 id="4">Usage</h2>
 
-`usage: Plascad [-h] [-i I] [-cMOBB CMOBB] [-cMOBC CMOBC] [-cMOBF CMOBF]
+`Usage: Plascad [-h] [-i] [-cMOBB CMOBB] [-cMOBC CMOBC] [-cMOBF CMOBF]
                [-cMOBT CMOBT] [-cMOBPB CMOBPB] [-cMOBH CMOBH] [-cMOBP CMOBP]
                [-cMOBV CMOBV] [-cMOBQ CMOBQ]`  
 
