@@ -141,4 +141,4 @@ Chawdry, R. angularplasmid. (https://github.com/vixis/angularplasmid)
 Coming soon!  
 
 <h2 id="10">Contact</h2>  
-You Che, hkucheyou@gmail.com 
+You CHE, hkucheyou@gmail.com 
