@@ -24,16 +24,19 @@ Plascad first predicts ORFs in the query plasmid sequences and then detects the 
 <h2 id="2">Requirements</h2>
 Linux  
 [Python >=3.6](https://www.python.org/downloads/)  
+
 [biopython](https://biopython.org/)
+
 [Prodigal](https://github.com/hyattpd/Prodigal)
+
 [blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+
 [hmmer](http://hmmer.org/)
-
-
 
 
 <h2 id="3">Installation</h2>
 Plascad can be installed either through conda or pip, though we advise to use Conda. 
+
 
 Conda
 
@@ -61,15 +64,16 @@ Help:
 
 <h2 id="5">Example</h2>
 
-Plascad -i your.plasmid.fasta
+curl -OL https://github.com/pianpianyouche/plascad/raw/master/plas_cad/example/example.fasta
+Plascad -i example.fasta
 
 <h2 id="6">Output files</h2>
 
 The final output of Plascad includes four files for the given plasmid sequences:  
 1) Summary file of the plasmid classification results.  
-2) Genetic location of the genes associated with plasmid transfer, ARGs  
-      for mobilizable and conjugative plasmids, respectively.  
-3) Html files containing the maps for all the identified conjugative plasmids.
+2) Genetic location of the genes associated with plasmid transfer and antibiotic resistance genes  
+      for both mobilizable and conjugative plasmids. 
+3) Html files containing the plasmid maps for all the identified conjugative plasmids.
 
 # Output of the example fasta file
 1) `example_plasmids_classification_sum.txt` # sumary of the plasmid classification results  
@@ -83,9 +87,7 @@ The final output of Plascad includes four files for the given plasmid sequences:
 
 #note: ARGs are displayed as type_subtype  
 
-
-
-2) `example_Conj_plasmids_loc_sum.txt` # Genetic location of the genes associated with transfer, as well as the detected ARGs  
+2) `example_Conj_plasmids_loc_sum.txt` # Genetic location of the genes associated with transfer and the detected ARGs  
 
 | Name | Marker genes | c-value & e-value | Genetic location | strand |
 | :-: | :-: | :-: | :-: | :-: |
@@ -109,12 +111,12 @@ The final output of Plascad includes four files for the given plasmid sequences:
 | NC_002377.1 | MPFT_virB9 | 6.3e-97 | 157585-158466 | 1 |
 | NC_002377.1 | MOBQ | 5.7e-104 | 30831-34133 | 1 |  
 
-#note: c-value for hmmsearch, e-value for blast  
+#note: c-value for hmmsearch, e-value for blastp 
 
 
 3) `example_Conjugative_plasmids_map` # folder containing the maps for all the identified conjugative plasmids  
 
-![](https://github.com/pianpianyouche/Plas-CAD/blob/master/example/example_Conjugative_plasmids_map/example.jpg)  
+![](https://github.com/pianpianyouche/plascad/blob/master/example.jpg)  
 
 <h2 id="7">Tips for visualization</h2>
 
