@@ -35,13 +35,12 @@ Linux,
 
 Plascad can be installed either through conda or pip, though we advise to use Conda.
 
-Conda
+`Conda`
 
-Conda
 Use [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/) to install Plascad
 
-conda create -n Plascad -y -c pianpianyouche plascad
-conda activate Plascad
+`conda create -n Plascad -y -c pianpianyouche plascad`
+`conda activate Plascad`
 
 
 pip3
