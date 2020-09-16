@@ -35,7 +35,7 @@ Linux,
 
 Plascad can be installed either through conda or pip, though we advise to use Conda.
 
-1 `Conda`
+1, `Conda`
 
 Use [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/) to install Plascad
 
@@ -44,7 +44,7 @@ Use [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](ht
 `conda activate Plascad`
 
 
-2 `pip3`
+2, `pip3`
 
 If you have the dependencies (Python >=3.6, blast >=2.7.1, prodigal >=2.6.3, hmmer >=3.2.1) in your PATH, you can install with pip3
 
