@@ -120,8 +120,25 @@ The final output of Plascad includes four files for the given plasmid sequences:
 
 A plasmid visualization component using AngularJS is integrated into our pipeline, all the plasmid maps are in HTML formats. In order to view the map locally, you need to download the `js` folder in addtion to the HTML files.  
 
-<h2 id="8">Citation</h2>  
+<h2 id="8">Acknowledgement</h2>  
+
+If you publish scientific articles using Plascad, please cite the following articles:
+
+Altschul, SF. et al., Basic local alignment search tool. J. Mol. Biol. 215, 403–410 (1990).
+
+Hyatt, D. et al., Prodigal: prokaryotic gene recognition and translation initiation site identification. BMC Bioinformatics 11, 119 (2010).
+
+Eddy, SR. Accelerated profile HMM searches. PLoS Comput. Biol. 7, e1002195 (2011).
+
+Yin, XL., ARGs-OAP v2.0 with an expanded SARG database and Hidden Markov Models for enhancement characterization and quantification of antibiotic resistance genes in environmental metagenomes. Bioinformatics. 34, 2263-2270 (2018).
+
+Chawdry, R. angularplasmid. (https://github.com/vixis/angularplasmid)
+
+
+  
+
+<h2 id="9">Citation</h2>  
 Coming soon!  
 
-<h2 id="8">Contact</h2>  
+<h2 id="10">Contact</h2>  
 You Che, hkucheyou@gmail.com 
