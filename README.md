@@ -22,15 +22,12 @@ Plascad first predicts ORFs in the query plasmid sequences and then detects the 
 ![](https://github.com/pianpianyouche/plascad/blob/master/Plascad.jpg) 
 
 <h2 id="2">Requirements</h2>
-Linux  
+
+Linux
 [Python >=3.6](https://www.python.org/downloads/)  
-
 [biopython](https://biopython.org/)
-
 [Prodigal](https://github.com/hyattpd/Prodigal)
-
 [blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
-
 [hmmer](http://hmmer.org/)
 
 
