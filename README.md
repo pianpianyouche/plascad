@@ -1,5 +1,5 @@
 # Plascad
-Plascad is a computationally efficient tool designed for automated plasmids classification, ARGs annotation and plasmid visualization.
+Plascad is a computationally efficient tool designed for automated plasmid classification, ARGs annotation and plasmid visualization.
 
 
 # Contents
@@ -7,7 +7,7 @@ Plascad is a computationally efficient tool designed for automated plasmids clas
 * [Plascad workflow](#1)
 * [Requirements](#2)
 * [Installation](#3)
-* [Quick usage](#4)
+* [Usage](#4)
 * [Example](#5)
 * [Output files](#6)
 * [Tips for visualization](#7)
@@ -24,22 +24,35 @@ Plascad first predicts ORFs in the query plasmid sequences and then detects the 
 <h2 id="2">Requirements</h2>
 Linux  
 [Python >=3.6](https://www.python.org/downloads/)  
-[Biopython](https://biopython.org/)  
-[Blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+[biopython](https://biopython.org/)
+[Prodigal](https://github.com/hyattpd/Prodigal)
+[blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+[hmmer](http://hmmer.org/)
 
 
 
-<h2 id="3">Run without installation</h2>
-git clone https://github.com/pianpianyouche/Plas-CAD.git
 
-<h2 id="4">Quick usage</h2>
+<h2 id="3">Installation</h2>
+Plascad can be installed either through conda or pip, though we advise to use Conda. 
 
-Run `python2.7 Plas-CAD.py -h` to view the program's most commonly used options:  
+Conda
 
-`usage: Plas-CAD.py [-h] [-i I] [-cMOBB] [-cMOBC]
-                       [-cMOBF] [-cMOBT] [-cMOBPB]
-                       [-cMOBH] [-cMOBP] [-cMOBV]
-                       [-cMOBQ]`  
+Use [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/) to install Plascad
+
+conda create -n Plascad -y -c pianpianyouche plascad
+conda activate Plascad
+
+pip3
+
+If you have the dependencies (Python >=3.6, blast >=2.7.1, prodigal >=2.6.3, hmmer >=3.2.1) in your PATH, you can install with pip3
+
+pip3 install Plascad
+
+<h2 id="4">Usage</h2>
+
+`usage: Plascad [-h] [-i I] [-cMOBB CMOBB] [-cMOBC CMOBC] [-cMOBF CMOBF]
+               [-cMOBT CMOBT] [-cMOBPB CMOBPB] [-cMOBH CMOBH] [-cMOBP CMOBP]
+               [-cMOBV CMOBV] [-cMOBQ CMOBQ]`  
 
 Help:  
     `-h, Show this help message and exit`   
@@ -48,16 +61,13 @@ Help:
 
 <h2 id="5">Example</h2>
 
-`cd example/`  
-`python2.7 ../Plas-CAD.py -i example.fasta`  
-
-#note: There are four conjugative plasmids in the example fasta file.
+Plascad -i your.plasmid.fasta
 
 <h2 id="6">Output files</h2>
 
-The final output of Plas-CAD includes four files for the given plasmid sequences:  
+The final output of Plascad includes four files for the given plasmid sequences:  
 1) Summary file of the plasmid classification results.  
-2) Genetic location of the genes associated with plasmid transfer as well as the detected ARGs  
+2) Genetic location of the genes associated with plasmid transfer, ARGs  
       for mobilizable and conjugative plasmids, respectively.  
 3) Html files containing the maps for all the identified conjugative plasmids.
 
