@@ -26,9 +26,9 @@ Plascad first predicts ORFs in the query plasmid sequences and then detects the 
 Linux,
 [Python >=3.6](https://www.python.org/downloads/), 
 [biopython](https://biopython.org/),
-[Prodigal](https://github.com/hyattpd/Prodigal),
-[blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download),
-[hmmer](http://hmmer.org/)
+[Prodigal >=2.6.3](https://github.com/hyattpd/Prodigal),
+[blast >=2.7.1](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download),
+[hmmer >=3.2.1](http://hmmer.org/)
 
 
 <h2 id="3">Installation</h2>
