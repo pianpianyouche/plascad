@@ -59,12 +59,13 @@ If you have the dependencies (Python >=3.6, blast >=2.7.1, prodigal >=2.6.3, hmm
 Help:  
     `-h, Show this help message and exit`   
     `-i, FASTA file of plasmid sequences`  
-    `-cMOB[B,C,F,T,PB,H,P,V,Q], alignment coverage for MOB HMM profile`
+    `-cMOB[B,C,F,T,PB,H,P,V,Q], alignment coverage for MOB HMM profiles`
 
 <h2 id="5">Example</h2>
 
 curl -OL https://github.com/pianpianyouche/plascad/raw/master/plas_cad/example/example.fasta
-Plascad -i example.fasta
+
+`Plascad -i example.fasta`
 
 <h2 id="6">Output files</h2>
 
