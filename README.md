@@ -134,7 +134,7 @@ Eddy, SR. Accelerated profile HMM searches. PLoS Comput. Biol. 7, e1002195 (2011
 
 Yin, XL., ARGs-OAP v2.0 with an expanded SARG database and Hidden Markov Models for enhancement characterization and quantification of antibiotic resistance genes in environmental metagenomes. Bioinformatics. 34, 2263-2270 (2018).
 
-Chawdry, R. angularplasmid. (https://github.com/vixis/angularplasmid)
+Chawdry, R. angularplasmid. (https://github.com/vixis/angularplasmid)(2014)
 
 
   
