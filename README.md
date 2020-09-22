@@ -39,7 +39,7 @@ Plascad can be installed either through conda or pip, though we advise to use Co
 
 Use [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/) to install Plascad
 
-`conda create -n Plascad -y -c -c bioconda -c pianpianyouche plascad`
+`conda create -n Plascad -y -c bioconda -c pianpianyouche plascad`
 
 `conda activate Plascad`
 
