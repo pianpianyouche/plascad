@@ -74,6 +74,7 @@ def main():
         ' -cMOBF ' + str(args.cMOBF)+ ' -cMOBT ' + str(args.cMOBT) + ' -cMOBPB ' + str(args.cMOBPB) + ' -cMOBH ' + str(args.cMOBH) \
         + ' -cMOBP ' + str(args.cMOBP) + ' -cMOBV ' + str(args.cMOBV) + ' -cMOBQ ' + str(args.cMOBQ) + "\n"
     os.system (cmdmobparsing)
+    os.system('rm -rf *_domtblout*')
 ###################################### MPF system hmmer #######################################################
     MPF_hmm = os.path.join(directory, "database/hmm_module/MPF_system_hmm")
     for root, dirnames, filenames in os.walk(MPF_hmm):
