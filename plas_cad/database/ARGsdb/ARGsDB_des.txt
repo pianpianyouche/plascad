@@ -1818,7 +1818,6 @@ AM279652.1.gene1.p01	beta-lactam__OXA-98
 gi|738848198|ref|WP_036737307.1|	vancomycin__vanH
 gi|693158997|ref|WP_032294834.1|	multidrug__mdtM
 ZP_04627600	multidrug__acrB
-KY991368.1_1	beta-lactam__OXA-9
 CM003621.1_2	tetracycline__tetracycline_resistance_protein
 ZP_04226949	bacitracin__bacA
 NC_018107.1_169	beta-lactam__TEM-1
