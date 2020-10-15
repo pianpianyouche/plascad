@@ -26,6 +26,8 @@ def main():
     parser.add_argument("-i",
                         help="input plasmids file for classification", type=str,
                         default='example/example.fasta')
+    parser.add_argument("-n", action='store_true',
+                        help="prodigal normal mode")
     parser.add_argument("-cMOBB",
                         help="alignment coverage for MOBB HMM profile",
                         default=75)
@@ -57,10 +59,14 @@ def main():
     directory =  os.path.abspath(os.path.dirname(__file__))
     file_name, file_ext = os.path.splitext(args.i)
 ###################################### Prodigal ###########################################################
-    cmdprodigal = "prodigal"  + " -i "  + str(args.i) + \
+    cmdprodigal_meta = "prodigal"  + " -i "  + str(args.i) + \
+                " -a " + str(file_name) + ".faa " + " -p meta -q -o temp.txt"
+    cmdprodigal_normal = "prodigal"  + " -i "  + str(args.i) + \
                 " -a " + str(file_name) + ".faa " + " -q -o temp.txt"
-
-    os.system(cmdprodigal)
+    if args.n:
+        os.system(cmdprodigal_normal)
+    else:
+        os.system(cmdprodigal_meta)
     os.remove("temp.txt")
 ###################################### MOB hmmer ###############################################################
     mob_hmm = os.path.join(directory, "database/hmm_module/MOB_hmm")
