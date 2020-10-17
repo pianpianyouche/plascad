@@ -1,6 +1,7 @@
 #! /usr/bin/env python3.6
 from collections import OrderedDict
 import re
+import os.path
 from Bio import SeqIO
 import os
 import argparse
@@ -36,6 +37,7 @@ parser.add_argument("-cMOBQ",
                     help="alignment coverage for MOBQ HMM profile",
                     type=int)
 args = parser.parse_args()
+dirname = os.path.dirname(args.i)
 #print ("MOB_parser.py was developed by You Che")
 ###################################### parsing each MOB module #############################################
 def MOB_parsing(in_domtblout, coverage):
@@ -84,7 +86,7 @@ def MOB_parsing(in_domtblout, coverage):
 #################################### MOB classification ####################################
 MOB_parsing(str(args.i) + "_MOBB.hmm_domtblout", args.cMOBB)
 MOB_parsing(str(args.i) + "_MOBC.hmm_domtblout", args.cMOBC)
-MOB_parsing(str(args.i) + "_MOBF.hmm_domtblout", args.cMOBF)
+MOB_parsing(str(args.i)+ "_MOBF.hmm_domtblout", args.cMOBF)
 MOB_parsing(str(args.i) + "_MOBT.hmm_domtblout", args.cMOBT)
 MOB_parsing(str(args.i) + "_MOBPB.hmm_domtblout", args.cMOBPB)
 MOB_parsing(str(args.i) + "_MOBH.hmm_domtblout", args.cMOBH)
@@ -92,7 +94,7 @@ MOB_parsing(str(args.i) + "_MOBP.hmm_domtblout", args.cMOBP)
 MOB_parsing(str(args.i) + "_MOBV.hmm_domtblout", args.cMOBV)
 MOB_parsing(str(args.i) + "_MOBQ.hmm_domtblout", args.cMOBQ)
 #################################### summary mob ##############################################
-catcmd = 'cat ' + '*MOB*_domtblout_parsed_out > ' + str(args.i) + '_MOB_temp_out'
+catcmd = 'cat ' + os.path.join(dirname,'*MOB*_domtblout_parsed_out') + " > "+ str(args.i) + '_MOB_temp_out'
 os.system(catcmd)
 #################################### mob parsing result #######################################
 def mob_classification(summary_mob, faa):
@@ -138,12 +140,3 @@ def mob_classification(summary_mob, faa):
 if __name__ == "__main__":
     mob_classification(str(args.i) + '_MOB_temp_out', str(args.i) + ".faa")
 #################################### mob unmob faa extraction #######################################
-
-
-
-
-
-
-
-
-
