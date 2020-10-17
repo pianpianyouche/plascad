@@ -57,12 +57,14 @@ def main():
                         default=55)
     args = parser.parse_args()
     directory =  os.path.abspath(os.path.dirname(__file__))
-    file_name, file_ext = os.path.splitext(args.i)
-    dirname = os.path.dirname(args.i)
+    file_input = os.path.basename(args.i)
+    file_name, file_ext = os.path.splitext(file_input)
+    dirname = os.path.dirname(os.path.abspath(args.i))
+    os.chdir(dirname)
 ###################################### Prodigal ###########################################################
-    cmdprodigal_meta = "prodigal"  + " -i "  + str(args.i) + \
+    cmdprodigal_meta = "prodigal"  + " -i "  + str(file_input) + \
                 " -a " + str(file_name) + ".faa " + " -p meta -q -o temp.txt"
-    cmdprodigal_normal = "prodigal"  + " -i "  + str(args.i) + \
+    cmdprodigal_normal = "prodigal"  + " -i "  + str(file_input) + \
                 " -a " + str(file_name) + ".faa " + " -q -o temp.txt"
     if args.n:
         os.system(cmdprodigal_normal)
@@ -81,8 +83,7 @@ def main():
         ' -cMOBF ' + str(args.cMOBF)+ ' -cMOBT ' + str(args.cMOBT) + ' -cMOBPB ' + str(args.cMOBPB) + ' -cMOBH ' + str(args.cMOBH) \
         + ' -cMOBP ' + str(args.cMOBP) + ' -cMOBV ' + str(args.cMOBV) + ' -cMOBQ ' + str(args.cMOBQ) + "\n"
     os.system (cmdmobparsing)
-    cmdremovehmm = 'rm -rf ' + os.path.join(dirname, "*domtblout")
-    os.system(cmdremovehmm)
+    os.system('rm -rf *domtblout')
 ###################################### MPF system hmmer #######################################################
     MPF_hmm = os.path.join(directory, "database/hmm_module/MPF_system_hmm")
     for root, dirnames, filenames in os.walk(MPF_hmm):
@@ -134,10 +135,8 @@ def main():
     cmdplot = 'python ' + os.path.join(directory, 'scripts/Plasmids_plot.py') + ' -i ' +  str(file_name)
     os.system(cmdplot)
 ###################################### remove temp  ######################################################
-    cmdremovetemp = 'rm -rf ' + os.path.join(dirname, "*out")
-    cmdremovefaa = 'rm -rf ' + os.path.join(dirname, "*faa")
-    os.system(cmdremovetemp)
-    os.system(cmdremovefaa)
+    os.system('rm -rf *out')
+    os.system('rm -rf *faa')
 ###################################### function  ######################################################
 if __name__ == '__main__':
     main()
