@@ -63,7 +63,7 @@ Help:
 
 <h2 id="5">Example</h2>
 
-curl -OL https://github.com/pianpianyouche/plascad/raw/master/plas_cad/example/example.fasta
+wget https://github.com/pianpianyouche/plascad/raw/master/plas_cad/example/example.fasta
 
 `Plascad -i example.fasta`
 
