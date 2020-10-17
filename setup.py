@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 from setuptools import setup
 setup(name='Plascad',
-      version='1.16',
+      version='1.17',
       packages=['plas_cad'],
       description="Plasmid classfication, ARGs annotation, Visualization",
       author="You CHE",
