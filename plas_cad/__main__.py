@@ -11,7 +11,7 @@ import plas_cad
 
 def main():
     usage = ("usage: Plascad -i your.plasmid.seqs.fasta")
-    version = 'Plascad {v}'.format(v=plas_cad.__version__)
+    #version = 'Plascad {v}'.format(v=plas_cad.__version__)
 ###################################### checking dependencies ########################################
     list_cmd = ['prodigal', 'blastp', 'hmmsearch']
     for cmd in list_cmd:
@@ -58,6 +58,7 @@ def main():
     args = parser.parse_args()
     directory =  os.path.abspath(os.path.dirname(__file__))
     file_name, file_ext = os.path.splitext(args.i)
+    dirname = os.path.dirname(args.i)
 ###################################### Prodigal ###########################################################
     cmdprodigal_meta = "prodigal"  + " -i "  + str(args.i) + \
                 " -a " + str(file_name) + ".faa " + " -p meta -q -o temp.txt"
@@ -80,7 +81,8 @@ def main():
         ' -cMOBF ' + str(args.cMOBF)+ ' -cMOBT ' + str(args.cMOBT) + ' -cMOBPB ' + str(args.cMOBPB) + ' -cMOBH ' + str(args.cMOBH) \
         + ' -cMOBP ' + str(args.cMOBP) + ' -cMOBV ' + str(args.cMOBV) + ' -cMOBQ ' + str(args.cMOBQ) + "\n"
     os.system (cmdmobparsing)
-    os.system('rm -rf *_domtblout*')
+    cmdremovehmm = 'rm -rf ' + os.path.join(dirname, "*domtblout")
+    os.system(cmdremovehmm)
 ###################################### MPF system hmmer #######################################################
     MPF_hmm = os.path.join(directory, "database/hmm_module/MPF_system_hmm")
     for root, dirnames, filenames in os.walk(MPF_hmm):
@@ -132,9 +134,10 @@ def main():
     cmdplot = 'python ' + os.path.join(directory, 'scripts/Plasmids_plot.py') + ' -i ' +  str(file_name)
     os.system(cmdplot)
 ###################################### remove temp  ######################################################
-    os.system('rm -rf *out')
-    os.system('rm -rf *faa')
-
+    cmdremovetemp = 'rm -rf ' + os.path.join(dirname, "*out")
+    cmdremovefaa = 'rm -rf ' + os.path.join(dirname, "*faa")
+    os.system(cmdremovetemp)
+    os.system(cmdremovefaa)
 ###################################### function  ######################################################
 if __name__ == '__main__':
     main()
