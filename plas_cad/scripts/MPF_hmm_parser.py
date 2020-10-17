@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-i",
                     help="input plasmids file prefix for classification",type=str)
 args = parser.parse_args()
+dirname = os.path.dirname(args.i)
 ###################################### parsing MPF module #############################################
 def MPF_parsing(in_domtblout, coverage):
     dic = OrderedDict()
@@ -57,10 +58,10 @@ def MPF_parsing(in_domtblout, coverage):
 ##################################### MPF classification ####################################
 for root, folders, files in os.walk(os.getcwd()):
     for i in fnmatch.filter(files, '*hmm_domtblout'):
-        MPF_parsing(i, 50)
+        MPF_parsing(os.path.join(dirname, i), 50)
 ##################################### ATPase and T4CP summary ########################################
-catATPase = 'cat ' + '*ATPase.hmm_domtblout_parsed_out> ' + str(args.i) + '_ATPase_temp_out'
-catT4CP = 'cat ' + '*T4CP*_domtblout_parsed_out> ' + str(args.i) + '_T4CP_temp_out'
+catATPase = 'cat ' + os.path.join(dirname, '*ATPase.hmm_domtblout_parsed_out') + " > " + str(args.i) + '_ATPase_temp_out'
+catT4CP = 'cat ' + os.path.join(dirname, '*T4CP*_domtblout_parsed_out') + " > " + str(args.i) + '_T4CP_temp_out'
 os.system(catATPase)
 os.system(catT4CP)
 #################################### ATPase and T4CP parsing result #######################################
@@ -100,15 +101,6 @@ MPFF_parsed_result(str(args.i) + '_T4CP_temp_out', str(args.i) + "_MOB_temp_mob.
 ################################################################################################
 for root, folders, files in os.walk(os.getcwd()):
     for i in fnmatch.filter(files, '*hmm_domtblout_parsed_out'):
-        MPFF_parsed_result(i, str(args.i) + "_MOB_temp_mob.faa")
+        MPFF_parsed_result(os.path.join(dirname, i), str(args.i) + "_MOB_temp_mob.faa")
 ################################################################################################
-
-
-
-
-
-
-
-
-
 
