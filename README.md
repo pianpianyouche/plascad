@@ -52,13 +52,14 @@ If you have the dependencies (Python >=3.6, blast >=2.7.1, prodigal >=2.6.3, hmm
 
 <h2 id="4">Usage</h2>
 
-`Usage: Plascad [-h] [-i] [-cMOBB CMOBB] [-cMOBC CMOBC] [-cMOBF CMOBF]
+`Usage: Plascad [-h] [-i] [-n] [-cMOBB CMOBB] [-cMOBC CMOBC] [-cMOBF CMOBF]
                [-cMOBT CMOBT] [-cMOBPB CMOBPB] [-cMOBH CMOBH] [-cMOBP CMOBP]
                [-cMOBV CMOBV] [-cMOBQ CMOBQ]`  
 
 Help:  
     `-h, Show this help message and exit`   
-    `-i, FASTA file of plasmid sequences`  
+    `-i, FASTA file of plasmid sequences`
+    `-n, Prodigal normal mode`
     `-cMOB[B,C,F,T,PB,H,P,V,Q], alignment coverage for MOB HMM profiles`
 
 <h2 id="5">Example</h2>
