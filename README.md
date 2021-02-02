@@ -142,7 +142,9 @@ Chawdry, R. angularplasmid. (https://github.com/vixis/angularplasmid) (2014)
   
 
 <h2 id="9">Citation</h2>  
-Coming soon!  
+If you use Plascad in your work, please cite:
+Y. CHE, et al., Conjugative plasmids interact with insertion sequences to shape the horizontal transfer of antimicrobial resistance genes. PNAS. 118(6):e2008731118. 
+doi: 10.1073/pnas.2008731118
 
 <h2 id="10">Contact</h2>  
 You CHE, hkucheyou@gmail.com 
